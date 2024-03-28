@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@400;600&display=swap');
+:root {
+    /* --neon-text-color: #c8e7ff; */
+    --neon-bg-color: #0d1e30; /* Dark blue background for contrast */
+    --neon-primary: #08f; /* Neon blue */
+    --neon-secondary: #0f0; /* Neon green */
+
+    /* --neon-glow: #08f; Color of the neon glow */
+  }
+  
+  body {
+    background-color: var(--neon-bg-color);
+    color: var(--neon-text-color);
+    width: 99%;
+    align-items: center;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-top: 4%;
+  }
+  .bottom-container {
+    margin-top: -46px;
+    width: 74%;
+    display: inline-grid;
+    margin-left: 124px;
+  }
+  .main-container {
+    box-shadow: 0 0 10px var(--neon-glow), 0 0 20px var(--neon-glow);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+  }
+  
+  .main-container::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    background: linear-gradient(40deg, var(--neon-primary) 0%, var(--neon-secondary) 100%);
+    z-index: -1;
+    filter: blur(20px);
+  }
+  
+
+  
+  #myProgress {
+    background-color: transparent;
+    /* border: 2px solid var(--neon-primary); */
+  }
+  
+  #myBar {
+    background-color: var(--neon-primary);
+    box-shadow: 0 0 10px var(--neon-primary), 0 0 20px var(--neon-primary); /* Neon glow */
+  }
+  
+  .btn,.skip-btn, .next-btn, #restart-btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--neon-text-color);
+    text-shadow: 0 0 5px var(--neon-glow);
+    border: 1px solid var(--neon-glow);
+    box-shadow: 0 0 5px var(--neon-glow), 0 0 15px var(--neon-glow);
+  }
+  
+  .btn:hover:not([disabled]), .next-btn:hover {
+    color: var(--neon-bg-color);
+    background-color: var(--neon-secondary);
+    box-shadow: 0 0 10px var(--neon-secondary), 0 0 20px var(--neon-secondary);
+  }
+  
+  .btn:active,.skip-btn:active, .next-btn:active {
+    box-shadow: 0 0 5px var(--neon-secondary), 0 0 10px var(--neon-secondary);
+  }
+  
+  .next-btn, .skip-btn, #restart-btn {
+    background: var(--neon-primary);
+    box-shadow: 0 0 5px var(--neon-primary), 0 0 20px var(--neon-primary); /* Neon glow */
+  }
+  
+
+.img-container {
+  display: flex;
+  justify-content: center;
+}
+.img-container > img {
+  width: 50%;
+  max-width: 180px;
+}
+
+.score-container {
+    width: 90%;
+    margin: 0px auto 0;
+    max-width: 400px;
+    display: none;
+    font-size: 1.1rem;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--neon-primary-color); /* Neon border */
+    box-shadow:
+      0 0 5px var(--neon-primary-color), /* Inner white glow */
+      0 0 15px var(--neon-primary-color), /* Medium glow */
+      0 0 30px var(--neon-primary-color), /* Large glow */
+      0 0 60px var(--neon-glow-color); /* Extra large glow */
+  }
+  
+  /* Apply neon glow to all child elements of .score-container */
+  .score-container * {
+    text-shadow:
+      0 0 3px var(--neon-text-glow-color),
+      0 0 7px var(--neon-text-glow-color);
+    color: var(--neon-text-glow-color);
+  }
+.score-container h2 {
+  font-size: 1.5rem;
+}
+.score-container h1 {
+  color: var(--green-500);
+  font-size: 2.8rem;
+}
+
+.score-container .bold {
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.score-container #score-total-question {
+  font-weight: 700;
+  color: cornflowerblue;
+}
+.score-container #score-total-ans {
+  font-weight: 700;
+  color: var(--green-500);
+}
+
+.upper-container {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.upper-container div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: -40px;
+}
+.upper-container div:nth-child(2) p:nth-child(2) {
+  font-weight: 900;
+  font-size: 3rem;
+  color: var(--green-500);
+}
+#myProgress {
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid var(--green-500);
+  margin-top: 15px;
+}
+
+#myBar {
+  width: 20%;
+  height: 30px;
+  background-color: var(--green-500);
+}
+
+#ans-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 0px;
+    margin-bottom: 120px;
+}
+
+#ans-container button {
+    color: black;
+  padding: 15px 30px;
+  text-align: left;
+  border: none;
+  font-size: 16px;
+  background-color: white;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#ans-container .btn:hover:not([disabled]) {
+  background-color: var(--black);
+  color: white;
+}
+#ans-container .btn:hover:not([disabled]), .next-btn:hover {
+    transform: translateY(-2px);
+  }
+  
+  #ans-container .btn:active, .next-btn:active {
+    transform: translateY(1px);
+  }
+
+#ans-container .correct {
+  background-color: var(--green-400);
+  color: white;
+}
+#ans-container .incorrect {
+  background-color: #ff6156;
+  color: white;
+}
+
+.next-btn {
+  border: none;
+  padding: 15px 20px;
+  width: 70%;
+  max-width: 250px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background-color: var(--green-500);
+  margin: 0 auto;
+  margin-top: -71px;;
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+}
+.skip-btn {
+    border: none;
+  padding: 15px 20px;
+  width: 70%;
+  max-width: 250px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background-color: var(--green-500);
+  margin: 0 auto;
+  margin-bottom: 25px;
+  margin-top: -71px;;
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  /* .skip-btn:hover {
+    background-color: #e5e5e5;
+    color: #333;
+  } */
+#restart-btn {
+  border: none;
+  padding: 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 2rem;
+  color: white;
+  background-color: var(--green-500);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn, #restart-btn, .next-btn,.skip-btn {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 12px;
+  }
+  
+  .main-container, .score-container {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
